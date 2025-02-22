@@ -7,7 +7,6 @@ services:
       - ./output:/app/output
     environment:
       - FUZZ=script
-      - CXXFLAGS= -DRUST_BITCOIN -DRUST_MINISCRIPT -DBTCD -DBITCOIN_CORE -DLDK -DNLIGHTNING
     command: ["./bitcoinfuzz"]
 
   block_deserialization:
@@ -16,7 +15,6 @@ services:
       - ./output:/app/output
     environment:
       - FUZZ=block_deserialization
-      - CXXFLAGS= -DRUST_BITCOIN -DRUST_MINISCRIPT -DBTCD -DBITCOIN_CORE -DLDK -DNLIGHTNING
     command: ["./bitcoinfuzz"]
 
   script_eval:
@@ -25,7 +23,6 @@ services:
       - ./output:/app/output
     environment:
       - FUZZ=script_eval
-      - CXXFLAGS= -DRUST_BITCOIN -DRUST_MINISCRIPT -DBTCD -DBITCOIN_CORE -DLDK -DNLIGHTNING
     command: ["./bitcoinfuzz"]
 
   descriptor_parse:
@@ -34,7 +31,6 @@ services:
       - ./output:/app/output
     environment:
       - FUZZ=descriptor_parse
-      - CXXFLAGS= -DRUST_BITCOIN -DRUST_MINISCRIPT -DBTCD -DBITCOIN_CORE -DLDK -DNLIGHTNING
     command: ["./bitcoinfuzz"]
 
   invoice_deserialization:
